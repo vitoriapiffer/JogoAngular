@@ -1,0 +1,31 @@
+<body>
+<p>{{status}}</p>
+
+<div class="main">
+    <div *ngFor="let quadrado of quadrados; index as i">
+
+        <div class="line" *ngIf="i < 3" (click)="markClick(i)">
+            <button class="quadrado"> {{quadrado}} <br/></button>
+        </div>
+        
+        <br *ngIf="i === 3">
+        
+        <div class="line" *ngIf="i >= 3 && i < 7" (click)="markClick(i)">
+            <button class="quadrado"> {{quadrado}} <br/></button>
+        </div>
+        
+        <br *ngIf="i === 5">
+        
+        <div class="line" *ngIf="i >= 7 && i < 9" (click)="markClick(i)">
+            <button class="quadrado"> {{quadrado}} <br/></button>
+        </div>
+        
+    </div>
+<br>
+
+  <div >
+      <button class="botao" (click)="restartGame()">Jogar Novamente!</button>
+  </div>
+
+</div>
+</body>
